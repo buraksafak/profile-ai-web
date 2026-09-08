@@ -1,11 +1,15 @@
 import { apiRequest } from '@/lib/http';
 import { chatMessageSchema } from '@/lib/schemas';
+import { getChatSessionId } from '@/lib/session';
 import { ValidationError } from '@/types/errors';
 import type { ChatResponseDto } from '@/types/chat';
 
 class ChatService {
   async sendMessage(rawMessage: string): Promise<ChatResponseDto> {
-    const parsed = chatMessageSchema.safeParse({ message: rawMessage });
+    const parsed = chatMessageSchema.safeParse({
+      message: rawMessage,
+      sessionId: getChatSessionId(),
+    });
 
     if (!parsed.success) {
       throw new ValidationError('Invalid request', parsed.error.issues);

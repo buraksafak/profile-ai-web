@@ -6,7 +6,7 @@ import { TypingAnimation } from '@/components/ui/typing-animation';
 import type { UiMessage } from '@/types/chat';
 
 const WELCOME_MESSAGE =
-  "Merhaba. Burak'ın dijital asistanıyım. Kariyeri, yetkinlikleri veya iletişim hakkında sorabilirsin.";
+  "Merhaba. Burak'ın dijital asistanıyım. Kariyeri, yetkinlikleri veya iletişim seçenekleri hakkında sorabilirsin.";
 
 interface ChatMessagesProps {
   messages: UiMessage[];
