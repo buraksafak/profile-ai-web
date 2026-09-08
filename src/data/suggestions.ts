@@ -1,5 +1,6 @@
 export const suggestedQuestions = [
-  'Ne iş yapıyorsun?',
-  'Flutter deneyimin nedir?',
-  'Nasıl iletişim kurabilirim?',
+  'Kısaca ne iş yapıyorsun?',
+  'Hangi teknolojilerle çalışıyorsun?',
+  'Öne çıkan projelerin neler?',
+  'Birlikte çalışmak için nasıl ulaşabilirim?',
 ] as const;
