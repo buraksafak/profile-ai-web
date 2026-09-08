@@ -1,0 +1,10 @@
+# Official homepage of Burak Şafak (Burak Safak).
+# Senior mobile developer in Ankara, Turkey.
+# Machine-readable profile: https://buraksafak.online/llms.txt
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /healthz
+
+Sitemap: https://buraksafak.online/sitemap.xml

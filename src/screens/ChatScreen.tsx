@@ -20,7 +20,13 @@ export function ChatScreen() {
   const isDark = theme === 'dark';
 
   return (
-    <main className="relative min-h-dvh overflow-hidden">
+    <main lang="tr" className="relative min-h-dvh overflow-hidden">
+      <a
+        href={`${import.meta.env.BASE_URL}hakkimda`}
+        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded-md focus:bg-background focus:px-3 focus:py-2"
+      >
+        Burak Şafak hakkında
+      </a>
       <CodeBackground />
 
       <div className="relative z-10 mx-auto flex min-h-dvh w-full max-w-3xl items-stretch p-0 sm:items-center sm:p-6 lg:max-w-4xl lg:p-10">

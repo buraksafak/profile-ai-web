@@ -1,0 +1,15 @@
+/* TEAM */
+
+Developer: Burak Şafak
+Role: Senior Mobile Developer (Flutter), Computer Engineer
+Location: Ankara, Türkiye
+Email: buraksafak2109@gmail.com
+LinkedIn: https://www.linkedin.com/in/buraksafak/
+GitHub: https://github.com/buraksafak
+
+/* SITE */
+
+Canonical: https://buraksafak.online
+Language: Turkish, English
+Standards: HTML5, JSON-LD, llms.txt
+Built with: React, TypeScript, Vite

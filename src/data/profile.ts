@@ -1,8 +1,10 @@
 export const profile = {
   name: 'Burak Şafak',
+  asciiName: 'Burak Safak',
   initials: 'BŞ',
-  title: 'Kıdemli Yazılım Geliştirme Uzmanı',
+  title: 'Kıdemli Mobil Geliştirici',
   location: 'Ankara',
+  country: 'Türkiye',
   photoSrc: `${import.meta.env.BASE_URL}burak.jpg`,
   email: 'buraksafak2109@gmail.com',
   socials: [

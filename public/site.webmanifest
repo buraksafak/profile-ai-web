@@ -1,0 +1,27 @@
+{
+  "id": "/",
+  "name": "Burak Şafak",
+  "short_name": "Burak Şafak",
+  "description": "Burak Şafak — kıdemli mobil geliştirici (Flutter) ve dijital asistan.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "lang": "tr",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/og-image.png",
+      "sizes": "400x400",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+# Burak Şafak — full source for assistants
+
+Canonical site: https://buraksafak.online
+Also known as: Burak Safak
+Job title: Kıdemli Mobil Uygulama Geliştirme Uzmanı / Senior Mobile Developer / Senior Software Development Specialist
+Location: Ankara, Türkiye (Europe/Istanbul)
+Languages: Turkish (native), English (B1)
+
+## Summary
+
+Burak Şafak is a senior mobile application developer and computer engineer based in Ankara, Turkey. He has more than five years of professional experience. He started coding at age 15 during high school and began his professional career in 2021. He currently works at Ray Sigorta as a Senior Software Development Specialist.
+
+His core expertise is Flutter mobile development, plus web and .NET Core backend work. On mobile, the focus is Flutter and Dart.
+
+He aims to ship solutions that are not only working but also structured, performant, secure, and aligned with engineering discipline.
+
+## Work
+
+- Ray Sigorta — Senior Software Development Specialist / Senior Mobile Developer (July 2025 – present). Development and architecture updates for the Ray eXpress Acente and Ray Connect mobile apps. Converting WebView screens such as DASK and contracted auto services into native Flutter screens. Modernizing iOS notification infrastructure with APNs (.p8) and Firebase.
+- MİA Teknoloji — Mobile Application Developer (past). Modular Flutter mobile apps for health informatics and public/hospital software.
+- AR AiTech — Mobile Application Developer (past). Mobile app development and backend API integration.
+
+## Education
+
+1. Bachelor's (2021): Süleyman Demirel University — Computer Engineering
+2. Associate degree (2016): Necmettin Erbakan University — Computer Programming
+3. High school (2013): Yamantürk Anadolu Meslek Lisesi — Information Technologies
+
+## Technical skills
+
+Mobile: Flutter, Dart, Cubit, Bloc, GoRouter, Dio, Firebase, APNs, Local Notifications.
+Web and backend: C#, .NET Core, RESTful / Web API.
+Data: PostgreSQL, Redis, MSSQL.
+Process: Git, GitHub, GitLab, Azure DevOps, Agile (Scrum, Kanban), unit and widget tests.
+Architecture: SOLID, Clean Code, OOP, MVVM, design patterns, maintainable enterprise architecture.
+Also used: Python (Flask), AWS.
+Environment: macOS, Cursor, VS Code, Android Studio, Visual Studio.
+
+## Certificates and writing
+
+Certificates include Clean Code, Enterprise Architecture, and mobile/cloud technologies. He has published technical writing on Flutter, SOLID, and design patterns (for example Singleton) on LinkedIn and Medium.
+
+## Availability
+
+Employed full-time at Ray Sigorta. Open to strong projects, technical conversation, and network. Open to freelance and consulting with limited capacity: Flutter apps, Flutter codebase improvement, web and .NET Core / REST API backend, architecture consulting. Typical response time: 1–2 business days. Preferred contact: email, then LinkedIn.
+
+## Contact
+
+- Email: buraksafak2109@gmail.com
+- LinkedIn: https://www.linkedin.com/in/buraksafak/
+- GitHub: https://github.com/buraksafak
+- Instagram: https://www.instagram.com/buraksafak_/
+- Turkish profile: https://buraksafak.online/hakkimda
+- English profile: https://buraksafak.online/about

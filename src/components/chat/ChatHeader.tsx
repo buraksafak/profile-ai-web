@@ -2,6 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { SparklesText } from '@/components/ui/sparkles-text';
 import { ThemeToggle } from '@/components/theme/ThemeToggle';
 import { profile } from '@/data/profile';
+import { absoluteUrl } from '@/data/site';
 import type { HealthIndicator } from '@/hooks/useHealthStatus';
 import { cn } from '@/lib/utils';
 
@@ -45,9 +46,14 @@ export function ChatHeader({ health, reducedMotion }: ChatHeaderProps) {
     health === 'ok' ? 'Çevrimiçi' : health === 'degraded' ? 'Sınırlı' : 'Kontrol ediliyor';
 
   return (
-    <header className="flex items-center gap-3 border-b border-cyan-500/20 px-4 py-3 sm:gap-4 sm:px-6 sm:py-4 dark:border-border">
+    <header
+      itemScope
+      itemType="https://schema.org/Person"
+      className="flex items-center gap-3 border-b border-cyan-500/20 px-4 py-3 sm:gap-4 sm:px-6 sm:py-4 dark:border-border"
+    >
+      <meta itemProp="url" content={absoluteUrl('/')} />
       <Avatar size="lg" className="size-12 ring-2 ring-cyan-500/25 sm:size-14 dark:ring-cyan-300/30">
-        <AvatarImage src={profile.photoSrc} alt={profile.name} />
+        <AvatarImage src={profile.photoSrc} alt={profile.name} itemProp="image" />
         <AvatarFallback className="bg-cyan-100 text-sm font-semibold text-cyan-800 dark:bg-cyan-950 dark:text-cyan-100">
           {profile.initials}
         </AvatarFallback>
@@ -55,19 +61,22 @@ export function ChatHeader({ health, reducedMotion }: ChatHeaderProps) {
 
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2">
-          {reducedMotion ? (
-            <h1 className="text-base font-semibold tracking-tight text-foreground sm:text-lg">
-              {profile.name}
-            </h1>
-          ) : (
-            <SparklesText
-              className="text-base font-semibold tracking-tight text-foreground sm:text-lg"
-              colors={{ first: '#22d3ee', second: '#0891b2' }}
-              sparklesCount={4}
-            >
-              {profile.name}
-            </SparklesText>
-          )}
+          <h1
+            itemProp="name"
+            className="text-base font-semibold tracking-tight text-foreground sm:text-lg"
+          >
+            {reducedMotion ? (
+              profile.name
+            ) : (
+              <SparklesText
+                className="text-base font-semibold tracking-tight text-foreground sm:text-lg"
+                colors={{ first: '#22d3ee', second: '#0891b2' }}
+                sparklesCount={4}
+              >
+                {profile.name}
+              </SparklesText>
+            )}
+          </h1>
           <span
             className={cn(
               'inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[11px]',
@@ -87,7 +96,11 @@ export function ChatHeader({ health, reducedMotion }: ChatHeaderProps) {
           </span>
         </div>
         <p className="truncate text-xs text-muted-foreground sm:text-sm">
-          {profile.title} · {profile.location}
+          <span itemProp="jobTitle">{profile.title}</span>
+          {' · '}
+          <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+            <span itemProp="addressLocality">{profile.location}</span>
+          </span>
         </p>
       </div>
 
@@ -101,7 +114,8 @@ export function ChatHeader({ health, reducedMotion }: ChatHeaderProps) {
                 key={social.href}
                 href={social.href}
                 target="_blank"
-                rel="noreferrer"
+                rel="me noopener noreferrer"
+                itemProp="sameAs"
                 className="rounded-full p-2 text-sky-800/70 transition hover:bg-sky-200/60 hover:text-sky-950 focus-visible:ring-2 focus-visible:ring-cyan-400/60 focus-visible:outline-none dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-cyan-200"
                 aria-label={social.label}
               >

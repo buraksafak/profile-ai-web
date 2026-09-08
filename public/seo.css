@@ -1,0 +1,152 @@
+:root {
+  color-scheme: light dark;
+  --bg: #e8f1f6;
+  --fg: #1e2a3a;
+  --muted: #4a5b6e;
+  --card: rgba(255, 255, 255, 0.72);
+  --line: rgba(8, 116, 144, 0.22);
+  --accent: #0e7490;
+  --link: #0e7490;
+  --shadow: 0 24px 80px rgba(14, 116, 144, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --fg: #e8f4f8;
+    --muted: #9bb0bd;
+    --card: rgba(15, 23, 42, 0.72);
+    --line: rgba(103, 232, 249, 0.16);
+    --accent: #67e8f9;
+    --link: #67e8f9;
+    --shadow: 0 24px 80px rgba(34, 211, 238, 0.08);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(14, 116, 144, 0.16), transparent 55%),
+    var(--bg);
+  color: var(--fg);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--link);
+}
+
+.wrap {
+  width: min(760px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.5rem 0 4rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  font-size: 0.92rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.hero img {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.lede {
+  margin: 0;
+  color: var(--muted);
+}
+
+article section {
+  margin-top: 2rem;
+}
+
+h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.15rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0;
+  list-style: none;
+}
+
+.skills li {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.28rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
