@@ -1,0 +1,28 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        # Keep this empty so the browser calls /api on the same origin.
+        # Do not reuse local VITE_API_URL=http://localhost:3000 here.
+        VITE_API_URL: ${FRONTEND_API_URL:-}
+    image: profile-ai-web:latest
+    container_name: profile-ai-web
+    restart: unless-stopped
+    ports:
+      - "${WEB_PORT:-80}:80"
+    environment:
+      API_UPSTREAM: ${API_UPSTREAM:-http://host.docker.internal:3000}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
