@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 import { getUserFacingMessage } from '@/lib/error-messages';
+import { createId } from '@/lib/id';
 import { chatService } from '@/services/chatService';
 import type { UiMessage } from '@/types/chat';
 
@@ -9,10 +10,6 @@ interface UseChatResult {
   error: string | null;
   sendMessage: (rawMessage: string) => Promise<void>;
   clearError: () => void;
-}
-
-function createId(): string {
-  return crypto.randomUUID();
 }
 
 export function useChat(): UseChatResult {

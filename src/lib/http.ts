@@ -9,6 +9,7 @@ import {
   ValidationError,
 } from '@/types/errors';
 import { env } from '@/config/env';
+import { createId } from '@/lib/id';
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
@@ -29,7 +30,7 @@ export function isApiErrorBody(value: unknown): value is ApiErrorBody {
 }
 
 export function createRequestId(): string {
-  return crypto.randomUUID();
+  return createId();
 }
 
 function mapApiError(status: number, payload: ApiErrorPayload): AppError {

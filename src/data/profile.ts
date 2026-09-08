@@ -3,7 +3,7 @@ export const profile = {
   initials: 'BŞ',
   title: 'Kıdemli Yazılım Geliştirme Uzmanı',
   location: 'Ankara',
-  photoSrc: '/burak.jpg',
+  photoSrc: `${import.meta.env.BASE_URL}burak.jpg`,
   email: 'buraksafak2109@gmail.com',
   socials: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/buraksafak/' },

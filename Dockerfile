@@ -8,9 +8,12 @@ RUN npm ci
 
 COPY . .
 
-# Empty = same-origin. nginx then proxies /api to the backend.
+# Empty API URL = same-origin /api. On VPS use /profile-ai-api.
+# VITE_BASE_PATH=/profile-ai-web/ when served behind global_nginx.
 ARG VITE_API_URL=
+ARG VITE_BASE_PATH=/
 ENV VITE_API_URL=$VITE_API_URL
+ENV VITE_BASE_PATH=$VITE_BASE_PATH
 
 RUN npm run build
 

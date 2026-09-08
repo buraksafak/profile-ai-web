@@ -149,10 +149,6 @@
   animation: code-drift 10s ease-in-out infinite;
 }
 
-.mask-image-fade {
-  mask-image: linear-gradient(to left, black 10%, transparent 78%);
-}
-
 @keyframes blink-cursor {
   0%,
   49% {

@@ -6,6 +6,7 @@ services:
         # Keep this empty so the browser calls /api on the same origin.
         # Do not reuse local VITE_API_URL=http://localhost:3000 here.
         VITE_API_URL: ${FRONTEND_API_URL:-}
+        VITE_BASE_PATH: ${FRONTEND_BASE_PATH:-/}
     image: profile-ai-web:latest
     container_name: profile-ai-web
     restart: unless-stopped

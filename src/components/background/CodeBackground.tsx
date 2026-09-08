@@ -1,7 +1,5 @@
 import { Particles } from '@/components/ui/particles';
 import { RetroGrid } from '@/components/ui/retro-grid';
-import { profile } from '@/data/profile';
-import { useImageAvailable } from '@/hooks/useImageAvailable';
 import { useIsMobile, usePrefersReducedMotion } from '@/hooks/useMediaQuery';
 import { useTheme } from '@/hooks/useTheme';
 import { cn } from '@/lib/utils';
@@ -19,7 +17,6 @@ export function CodeBackground() {
   const reducedMotion = usePrefersReducedMotion();
   const isMobile = useIsMobile();
   const { theme } = useTheme();
-  const hasPhoto = useImageAvailable(profile.photoSrc);
   const particleCount = reducedMotion ? 0 : isMobile ? 18 : 55;
   const isDark = theme === 'dark';
 
@@ -27,14 +24,6 @@ export function CodeBackground() {
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
       <div className="absolute inset-0 bg-[#d5e3ee] dark:bg-[#020617]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(14,116,144,0.28),_transparent_44%),radial-gradient(circle_at_80%_18%,_rgba(37,99,235,0.16),_transparent_30%)] dark:bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.16),_transparent_42%),radial-gradient(circle_at_80%_20%,_rgba(56,189,248,0.12),_transparent_28%)]" />
-
-      {hasPhoto ? (
-        <img
-          src={profile.photoSrc}
-          alt=""
-          className="absolute top-[-8%] right-[-6%] h-[78%] w-auto max-w-none object-cover opacity-[0.1] grayscale mix-blend-multiply mask-image-fade dark:opacity-[0.14] dark:mix-blend-screen"
-        />
-      ) : null}
 
       <RetroGrid
         className="opacity-80"

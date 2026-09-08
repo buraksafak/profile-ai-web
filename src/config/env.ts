@@ -5,7 +5,7 @@ const envSchema = z.object({
     .string()
     .trim()
     .refine((value) => {
-      if (value === '') {
+      if (value === '' || value.startsWith('/')) {
         return true;
       }
 
@@ -15,7 +15,7 @@ const envSchema = z.object({
       } catch {
         return false;
       }
-    }, 'VITE_API_URL must be a valid URL or empty for same-origin'),
+    }, 'VITE_API_URL must be a valid URL, an origin-relative path, or empty'),
 });
 
 function resolveApiUrl(value: string | undefined): string {
